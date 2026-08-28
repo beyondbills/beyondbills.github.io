@@ -4,7 +4,7 @@ Beyond Bills is a static multilingual website for an emerging NGO and ideologica
 
 ## Files
 
-- `index.html`: the full public landing site, including language switching, SEO metadata, navigation, manifesto links, community form, contact form, and default language detection.
+- `index.html`: the full public landing site, including language switching, SEO metadata, navigation, manifesto links, community form, and default language detection.
 - `assets/manifesto.css`: shared styling for all HTML manifesto readers.
 - `assets/manifesto.js`: shared manifesto sidebar, copy-link action, and icon initialization.
 - `assets/Beyond_Bills_Manifesto_[Language].html`: readable manifesto pages for each supported language.
@@ -30,17 +30,18 @@ The language switcher uses ISO language codes in the URL query string. If no `la
 
 ## Forms
 
-Both forms submit to FormSubmit:
+The Join Community form submits to FormSubmit:
 
 ```text
 https://formsubmit.co/onkezabahizi@gmail.com
 ```
 
-The contact form contains exactly these required fields:
+The community form contains these required fields:
 
-- Subject
+- Name
+- Email
 - Phone, preferably WhatsApp
-- Message
+- How would you like to contribute?
 
 Phone validation expects a full international number with country code, such as `+250788123456`.
 
@@ -72,6 +73,8 @@ Each manifesto page uses one shared reader layout:
 
 - left sidebar generated from `h1`, `h2`, and `h3` headings
 - hamburger menu on all devices
+- animated reader progress bar
+- active section highlighting
 - back-to-site action
 - copy-link action
 - PDF download action

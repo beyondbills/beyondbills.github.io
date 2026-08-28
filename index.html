@@ -84,7 +84,6 @@
         <a href="#hero" class="nav-link px-4 py-3 text-sm font-bold hover:bg-white/10" data-i18n="navHome">Home</a>
         <a href="#manifesto" class="nav-link px-4 py-3 text-sm font-bold hover:bg-white/10" data-i18n="navManifesto">Manifesto</a>
         <a href="#community" class="nav-link px-4 py-3 text-sm font-bold hover:bg-white/10" data-i18n="navCommunity">Join Community</a>
-        <a href="#contact" class="nav-link px-4 py-3 text-sm font-bold hover:bg-white/10" data-i18n="navContact">Contact</a>
       </div>
       <div class="flex items-center gap-2">
         <div class="relative">
@@ -103,7 +102,6 @@
       <a href="#hero" class="block px-3 py-3 font-bold" data-i18n="navHome">Home</a>
       <a href="#manifesto" class="block px-3 py-3 font-bold" data-i18n="navManifesto">Manifesto</a>
       <a href="#community" class="block px-3 py-3 font-bold" data-i18n="navCommunity">Join Community</a>
-      <a href="#contact" class="block px-3 py-3 font-bold" data-i18n="navContact">Contact</a>
     </div>
   </header>
 
@@ -198,6 +196,11 @@
             <input id="communityEmail" name="email" type="email" required class="w-full border border-slate-300 px-4 py-3 outline-ocean" autocomplete="email">
             <p class="field-error mt-2 text-sm font-bold text-red-600" data-i18n="emailError">Please enter a valid email address.</p>
           </div>
+          <label class="block font-extrabold" for="communityPhone"><span data-i18n="phoneLabel">Phone, preferably WhatsApp</span> <span class="text-red-600">*</span></label>
+          <div class="mb-5 mt-2" data-field>
+            <input id="communityPhone" name="phone" type="tel" required pattern="^\+[1-9][0-9]{7,14}$" placeholder="+250788123456" class="w-full border border-slate-300 px-4 py-3 outline-ocean" autocomplete="tel">
+            <p class="field-error mt-2 text-sm font-bold text-red-600" data-i18n="phoneError">Use a full international phone number with country code, for example +250788123456.</p>
+          </div>
           <label class="block font-extrabold" for="communityRole"><span data-i18n="roleLabel">How would you like to contribute?</span> <span class="text-red-600">*</span></label>
           <div class="mb-6 mt-2" data-field>
             <textarea id="communityRole" name="contribution" required minlength="12" rows="5" class="w-full border border-slate-300 px-4 py-3 outline-ocean"></textarea>
@@ -211,41 +214,6 @@
       </div>
     </section>
 
-    <section id="contact" class="bg-slate-100 py-20 sm:py-28">
-      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-        <div data-aos="fade-up">
-          <p class="mb-4 inline-flex bg-amber px-4 py-2 text-sm font-extrabold text-white" data-i18n="contactKicker">Contact</p>
-          <h2 class="text-4xl font-black leading-tight sm:text-5xl" data-i18n="contactTitle">Talk to Beyond Bills.</h2>
-          <p class="mt-5 text-lg leading-8 text-slate-700" data-i18n="contactText">Send questions, partnership notes, research ideas, media requests, or community proposals.</p>
-          <div class="mt-8 border border-slate-300 bg-white p-6">
-            <p class="flex items-center gap-3 font-extrabold"><span class="material-symbols-outlined text-ocean" aria-hidden="true">mail</span> onkezabahizi@gmail.com</p>
-          </div>
-        </div>
-        <form action="https://formsubmit.co/onkezabahizi@gmail.com" method="POST" class="bg-white p-6 shadow-2xl sm:p-8" data-aos="fade-up" data-validate>
-          <input type="hidden" name="_subject" value="Beyond Bills contact message">
-          <input type="hidden" name="_template" value="table">
-          <label class="block font-extrabold" for="subject"><span data-i18n="subjectLabel">Subject</span> <span class="text-red-600">*</span></label>
-          <div class="mb-5 mt-2" data-field>
-            <input id="subject" name="subject" required minlength="3" class="w-full border border-slate-300 px-4 py-3 outline-ocean">
-            <p class="field-error mt-2 text-sm font-bold text-red-600" data-i18n="subjectError">Please enter a subject.</p>
-          </div>
-          <label class="block font-extrabold" for="phone"><span data-i18n="phoneLabel">Phone, preferably WhatsApp</span> <span class="text-red-600">*</span></label>
-          <div class="mb-5 mt-2" data-field>
-            <input id="phone" name="phone" type="tel" required pattern="^\+[1-9][0-9]{7,14}$" placeholder="+250788123456" class="w-full border border-slate-300 px-4 py-3 outline-ocean" autocomplete="tel">
-            <p class="field-error mt-2 text-sm font-bold text-red-600" data-i18n="phoneError">Use a full international phone number with country code, for example +250788123456.</p>
-          </div>
-          <label class="block font-extrabold" for="message"><span data-i18n="messageLabel">Message</span> <span class="text-red-600">*</span></label>
-          <div class="mb-6 mt-2" data-field>
-            <textarea id="message" name="message" required minlength="12" rows="6" class="w-full border border-slate-300 px-4 py-3 outline-ocean"></textarea>
-            <p class="field-error mt-2 text-sm font-bold text-red-600" data-i18n="messageError">Please write at least 12 characters.</p>
-          </div>
-          <button class="inline-flex w-full items-center justify-center gap-2 bg-rose px-6 py-4 font-black text-white hover:bg-rose-800" type="submit">
-            <span class="material-symbols-outlined" aria-hidden="true">outgoing_mail</span>
-            <span data-i18n="contactSubmit">Send message</span>
-          </button>
-        </form>
-      </div>
-    </section>
   </main>
 
   <footer class="bg-ink px-4 py-8 text-center font-extrabold text-white">
@@ -259,7 +227,7 @@
         name: "English", asset: "English", dir: "ltr", locale: "en_US", motto: "9 to 1. One job. No bills. Together.",
         title: "Beyond Bills | Post-Currency Economy Think Tank",
         description: "Beyond Bills is an emerging NGO and ideological think tank advocating a post-currency, service-based economy where one ability-suited 9-to-1 job provisions life's essentials.",
-        navHome: "Home", navManifesto: "Manifesto", navCommunity: "Join Community", navContact: "Contact",
+        navHome: "Home", navManifesto: "Manifesto", navCommunity: "Join Community",
         kicker: "Emerging NGO and ideological think tank",
         heroMessage: "Beyond Bills imagines a post-currency economy where technology frees people from excessive work, every adult contributes through one ability-suited job, and a global network directly provisions life's essentials—turning four hours of meaningful work into more time, security, dignity, and human possibility.",
         readManifesto: "Read the manifesto", joinMovement: "Join the community", manifestoKicker: "The manifesto", manifestoTitle: "A direct-provision economy for human life.",
@@ -268,107 +236,99 @@
         pillarTwoTitle: "Ability-suited work", pillarTwoText: "Every adult contributes through one role matched to capacity, talent, training, and dignity.", pillarThreeTitle: "Life essentials", pillarThreeText: "Remuneration is direct access to essential services, reducing dependence on bills and debt.",
         pillarFourTitle: "Global network", pillarFourText: "Individuals, companies, and institutions cooperate to provision a shared service conglomerate.", communityKicker: "Join community", communityTitle: "Help shape the post-currency conversation.",
         communityText: "Join a multilingual circle of organizers, researchers, technologists, builders, caregivers, entrepreneurs, and citizens exploring how essential-life provisioning could work in practice.",
-        nameLabel: "Name", emailLabel: "Email", roleLabel: "How would you like to contribute?", communitySubmit: "Join community", contactKicker: "Contact", contactTitle: "Talk to Beyond Bills.",
-        contactText: "Send questions, partnership notes, research ideas, media requests, or community proposals.", subjectLabel: "Subject", phoneLabel: "Phone, preferably WhatsApp", messageLabel: "Message", contactSubmit: "Send message",
-        nameError: "Please enter your name.", emailError: "Please enter a valid email address.", subjectError: "Please enter a subject.", phoneError: "Use a full international phone number with country code, for example +250788123456.", messageError: "Please write at least 12 characters."
+        nameLabel: "Name", emailLabel: "Email", phoneLabel: "Phone, preferably WhatsApp", roleLabel: "How would you like to contribute?", communitySubmit: "Join community",
+        nameError: "Please enter your name.", emailError: "Please enter a valid email address.", phoneError: "Use a full international phone number with country code, for example +250788123456.", messageError: "Please write at least 12 characters."
       },
       fr: {
         name: "Français", asset: "French", dir: "ltr", locale: "fr_FR", motto: "De 9h à 13h. Un métier. Zéro facture. Ensemble.",
         title: "Beyond Bills | Think tank pour une économie post-monétaire", description: "Beyond Bills défend une économie de services où un emploi adapté de 9h à 13h ouvre l'accès aux essentiels de la vie.",
-        navHome: "Accueil", navManifesto: "Manifeste", navCommunity: "Communauté", navContact: "Contact", kicker: "ONG émergente et think tank idéologique",
+        navHome: "Accueil", navManifesto: "Manifeste", navCommunity: "Communauté", kicker: "ONG émergente et think tank idéologique",
         heroMessage: "Beyond Bills imagine une économie post-monétaire où la technologie libère les personnes du travail excessif, où chaque adulte contribue par un emploi adapté à ses capacités, et où un réseau mondial fournit directement les essentiels de la vie, transformant quatre heures de travail utile en plus de temps, de sécurité, de dignité et de possibilités humaines.",
         readManifesto: "Lire le manifeste", joinMovement: "Rejoindre la communauté", manifestoKicker: "Le manifeste", manifestoTitle: "Une économie de provision directe pour la vie humaine.",
         manifestoSummary: "Le manifeste Beyond Bills affirme que l'économie devrait garantir l'accès aux essentiels de la vie plutôt que maximiser la circulation monétaire. Il propose un emploi utile et adapté pour chaque adulte, une journée de 9h à 13h, l'automatisation responsable et un réseau mondial de services.",
         openHtml: "Ouvrir le manifeste HTML", downloadPdf: "Télécharger le PDF", pillarOneTitle: "Contribution de quatre heures", pillarOneText: "Une journée plus courte devient un objectif pour la productivité, la famille, l'apprentissage et la vie civique.",
         pillarTwoTitle: "Travail adapté", pillarTwoText: "Chaque adulte contribue par un rôle lié à ses capacités, talents, formations et dignité.", pillarThreeTitle: "Essentiels de la vie", pillarThreeText: "La rémunération devient l'accès direct aux services essentiels.",
         pillarFourTitle: "Réseau mondial", pillarFourText: "Individus, entreprises et institutions coopèrent pour provisionner un conglomérat de services.", communityKicker: "Rejoindre", communityTitle: "Façonner la conversation post-monétaire.",
-        communityText: "Rejoignez un cercle multilingue de chercheurs, bâtisseurs, organisateurs, entrepreneurs et citoyens.", nameLabel: "Nom", emailLabel: "Email", roleLabel: "Comment souhaitez-vous contribuer?", communitySubmit: "Rejoindre",
-        contactKicker: "Contact", contactTitle: "Parler à Beyond Bills.", contactText: "Envoyez questions, partenariats, idées de recherche ou demandes médias.", subjectLabel: "Sujet", phoneLabel: "Téléphone, de préférence WhatsApp", messageLabel: "Message", contactSubmit: "Envoyer",
-        nameError: "Veuillez saisir votre nom.", emailError: "Veuillez saisir une adresse email valide.", subjectError: "Veuillez saisir un sujet.", phoneError: "Utilisez un numéro international complet avec indicatif, par exemple +250788123456.", messageError: "Veuillez écrire au moins 12 caractères."
+        communityText: "Rejoignez un cercle multilingue de chercheurs, bâtisseurs, organisateurs, entrepreneurs et citoyens.", nameLabel: "Nom", emailLabel: "Email", phoneLabel: "Téléphone, de préférence WhatsApp", roleLabel: "Comment souhaitez-vous contribuer?", communitySubmit: "Rejoindre",
+        nameError: "Veuillez saisir votre nom.", emailError: "Veuillez saisir une adresse email valide.", phoneError: "Utilisez un numéro international complet avec indicatif, par exemple +250788123456.", messageError: "Veuillez écrire au moins 12 caractères."
       },
       es: {
         name: "Español", asset: "Spanish", dir: "ltr", locale: "es_ES", motto: "De 9 a 1. Un empleo. Sin facturas. Juntos.",
         title: "Beyond Bills | Laboratorio de ideas postmonetario", description: "Beyond Bills promueve una economía basada en servicios donde un empleo de 9 a 1 adaptado a cada persona provee los esenciales de la vida.",
-        navHome: "Inicio", navManifesto: "Manifiesto", navCommunity: "Comunidad", navContact: "Contacto", kicker: "ONG emergente y laboratorio ideológico",
+        navHome: "Inicio", navManifesto: "Manifiesto", navCommunity: "Comunidad", kicker: "ONG emergente y laboratorio ideológico",
         heroMessage: "Beyond Bills imagina una economía postmonetaria donde la tecnología libera a las personas del trabajo excesivo, cada adulto contribuye mediante un empleo adaptado a sus capacidades y una red global provee directamente los esenciales de la vida, convirtiendo cuatro horas de trabajo significativo en más tiempo, seguridad, dignidad y posibilidad humana.",
         readManifesto: "Leer el manifiesto", joinMovement: "Unirse a la comunidad", manifestoKicker: "El manifiesto", manifestoTitle: "Una economía de provisión directa para la vida humana.",
         manifestoSummary: "El manifiesto sostiene que la economía debe organizarse alrededor del acceso garantizado a los esenciales de la vida, no alrededor de la circulación infinita de dinero. Propone un empleo útil para cada adulto, jornada de 9 a 1, automatización responsable y una red global de servicios.",
         openHtml: "Abrir manifiesto HTML", downloadPdf: "Descargar PDF", pillarOneTitle: "Contribución de cuatro horas", pillarOneText: "Una jornada más corta favorece productividad, familia, aprendizaje y vida cívica.",
         pillarTwoTitle: "Trabajo adaptado", pillarTwoText: "Cada adulto contribuye en un rol compatible con capacidad, talento, formación y dignidad.", pillarThreeTitle: "Esenciales de vida", pillarThreeText: "La remuneración es acceso directo a servicios esenciales.",
         pillarFourTitle: "Red global", pillarFourText: "Personas, empresas e instituciones cooperan para provisionar servicios compartidos.", communityKicker: "Comunidad", communityTitle: "Ayuda a dar forma a la conversación postmonetaria.",
-        communityText: "Únete a un círculo multilingüe de organizadores, investigadores, tecnólogos, constructores y ciudadanos.", nameLabel: "Nombre", emailLabel: "Email", roleLabel: "¿Cómo quieres contribuir?", communitySubmit: "Unirme",
-        contactKicker: "Contacto", contactTitle: "Habla con Beyond Bills.", contactText: "Envía preguntas, alianzas, ideas de investigación o solicitudes de medios.", subjectLabel: "Asunto", phoneLabel: "Teléfono, preferiblemente WhatsApp", messageLabel: "Mensaje", contactSubmit: "Enviar",
-        nameError: "Escribe tu nombre.", emailError: "Escribe un email válido.", subjectError: "Escribe un asunto.", phoneError: "Usa un número internacional completo con código de país, por ejemplo +250788123456.", messageError: "Escribe al menos 12 caracteres."
+        communityText: "Únete a un círculo multilingüe de organizadores, investigadores, tecnólogos, constructores y ciudadanos.", nameLabel: "Nombre", emailLabel: "Email", phoneLabel: "Teléfono, preferiblemente WhatsApp", roleLabel: "¿Cómo quieres contribuir?", communitySubmit: "Unirme",
+        nameError: "Escribe tu nombre.", emailError: "Escribe un email válido.", phoneError: "Usa un número internacional completo con código de país, por ejemplo +250788123456.", messageError: "Escribe al menos 12 caracteres."
       },
       de: {
         name: "Deutsch", asset: "German", dir: "ltr", locale: "de_DE", motto: "9 bis 1. Ein Job. Keine Rechnungen. Gemeinsam.",
         title: "Beyond Bills | Denkfabrik für eine postmonetäre Wirtschaft", description: "Beyond Bills setzt sich für eine servicebasierte Wirtschaft ein, in der ein geeigneter 9-bis-1-Job die Lebensgrundlagen sichert.",
-        navHome: "Start", navManifesto: "Manifest", navCommunity: "Gemeinschaft", navContact: "Kontakt", kicker: "Entstehende NGO und ideologische Denkfabrik",
+        navHome: "Start", navManifesto: "Manifest", navCommunity: "Gemeinschaft", kicker: "Entstehende NGO und ideologische Denkfabrik",
         heroMessage: "Beyond Bills entwirft eine postmonetäre Wirtschaft, in der Technologie Menschen von übermäßiger Arbeit befreit, jeder Erwachsene durch eine fähigkeitsgerechte Aufgabe beiträgt und ein globales Netzwerk die Lebensgrundlagen direkt bereitstellt, sodass vier Stunden sinnvolle Arbeit mehr Zeit, Sicherheit, Würde und menschliche Möglichkeiten schaffen.",
         readManifesto: "Manifest lesen", joinMovement: "Gemeinschaft beitreten", manifestoKicker: "Das Manifest", manifestoTitle: "Eine Wirtschaft direkter Versorgung für das menschliche Leben.",
         manifestoSummary: "Das Beyond Bills Manifest argumentiert, dass Wirtschaft den garantierten Zugang zu Lebensgrundlagen sichern sollte, statt endlosen Geldumlauf zu maximieren. Es schlägt eine sinnvolle Aufgabe für jeden Erwachsenen, einen 9-bis-1-Arbeitstag, verantwortliche Automatisierung und ein globales Servicenetzwerk vor.",
         openHtml: "HTML-Manifest öffnen", downloadPdf: "PDF herunterladen", pillarOneTitle: "Vier Stunden Beitrag", pillarOneText: "Ein kürzerer Arbeitstag dient Produktivität, Familie, Lernen und Gemeinwesen.",
         pillarTwoTitle: "Passende Arbeit", pillarTwoText: "Jeder Erwachsene trägt durch eine Rolle bei, die Fähigkeit, Talent, Ausbildung und Würde achtet.", pillarThreeTitle: "Lebensgrundlagen", pillarThreeText: "Vergütung bedeutet direkten Zugang zu wesentlichen Diensten.",
         pillarFourTitle: "Globales Netzwerk", pillarFourText: "Menschen, Unternehmen und Institutionen kooperieren, um gemeinsame Dienste bereitzustellen.", communityKicker: "Gemeinschaft", communityTitle: "Gestalte die postmonetäre Debatte mit.",
-        communityText: "Tritt einem mehrsprachigen Kreis von Organisatoren, Forschern, Technologen, Gründern und Bürgern bei.", nameLabel: "Name", emailLabel: "E-Mail", roleLabel: "Wie möchtest du beitragen?", communitySubmit: "Beitreten",
-        contactKicker: "Kontakt", contactTitle: "Sprich mit Beyond Bills.", contactText: "Sende Fragen, Partnerschaftsideen, Forschungsvorschläge oder Medienanfragen.", subjectLabel: "Betreff", phoneLabel: "Telefon, vorzugsweise WhatsApp", messageLabel: "Nachricht", contactSubmit: "Senden",
-        nameError: "Bitte gib deinen Namen ein.", emailError: "Bitte gib eine gültige E-Mail-Adresse ein.", subjectError: "Bitte gib einen Betreff ein.", phoneError: "Nutze eine vollständige internationale Telefonnummer mit Ländercode, zum Beispiel +250788123456.", messageError: "Bitte schreibe mindestens 12 Zeichen."
+        communityText: "Tritt einem mehrsprachigen Kreis von Organisatoren, Forschern, Technologen, Gründern und Bürgern bei.", nameLabel: "Name", emailLabel: "E-Mail", phoneLabel: "Telefon, vorzugsweise WhatsApp", roleLabel: "Wie möchtest du beitragen?", communitySubmit: "Beitreten",
+        nameError: "Bitte gib deinen Namen ein.", emailError: "Bitte gib eine gültige E-Mail-Adresse ein.", phoneError: "Nutze eine vollständige internationale Telefonnummer mit Ländercode, zum Beispiel +250788123456.", messageError: "Bitte schreibe mindestens 12 Zeichen."
       },
       it: {
         name: "Italiano", asset: "Italian", dir: "ltr", locale: "it_IT", motto: "9 alle 13. Un lavoro. Niente bollette. Insieme.",
         title: "Beyond Bills | Centro di pensiero per un'economia post-monetaria", description: "Beyond Bills promuove un'economia di servizi in cui un lavoro adatto dalle 9 alle 13 provvede agli essenziali della vita.",
-        navHome: "Home", navManifesto: "Manifesto", navCommunity: "Comunità", navContact: "Contatto", kicker: "ONG emergente e think tank ideologico",
+        navHome: "Home", navManifesto: "Manifesto", navCommunity: "Comunità", kicker: "ONG emergente e think tank ideologico",
         heroMessage: "Beyond Bills immagina un'economia post-monetaria in cui la tecnologia libera le persone dal lavoro eccessivo, ogni adulto contribuisce con un lavoro adatto alle proprie capacità e una rete globale fornisce direttamente gli essenziali della vita, trasformando quattro ore di lavoro significativo in più tempo, sicurezza, dignità e possibilità umane.",
         readManifesto: "Leggi il manifesto", joinMovement: "Unisciti alla comunità", manifestoKicker: "Il manifesto", manifestoTitle: "Un'economia di fornitura diretta per la vita umana.",
         manifestoSummary: "Il manifesto Beyond Bills sostiene che l'economia dovrebbe garantire l'accesso agli essenziali della vita invece di massimizzare la circolazione del denaro. Propone un lavoro significativo per ogni adulto, una giornata dalle 9 alle 13, automazione responsabile e una rete globale di servizi.",
         openHtml: "Apri manifesto HTML", downloadPdf: "Scarica PDF", pillarOneTitle: "Contributo di quattro ore", pillarOneText: "Una giornata più breve sostiene produttività, famiglia, apprendimento e vita civica.",
         pillarTwoTitle: "Lavoro adatto", pillarTwoText: "Ogni adulto contribuisce con un ruolo coerente con capacità, talento, formazione e dignità.", pillarThreeTitle: "Essenziali della vita", pillarThreeText: "La remunerazione diventa accesso diretto ai servizi essenziali.",
         pillarFourTitle: "Rete globale", pillarFourText: "Persone, aziende e istituzioni cooperano per fornire servizi condivisi.", communityKicker: "Comunità", communityTitle: "Aiuta a plasmare la conversazione post-monetaria.",
-        communityText: "Unisciti a un gruppo multilingue di organizzatori, ricercatori, tecnologi, costruttori e cittadini.", nameLabel: "Nome", emailLabel: "Email", roleLabel: "Come vorresti contribuire?", communitySubmit: "Unisciti",
-        contactKicker: "Contatto", contactTitle: "Parla con Beyond Bills.", contactText: "Invia domande, note di partnership, idee di ricerca o richieste stampa.", subjectLabel: "Oggetto", phoneLabel: "Telefono, preferibilmente WhatsApp", messageLabel: "Messaggio", contactSubmit: "Invia",
-        nameError: "Inserisci il tuo nome.", emailError: "Inserisci un indirizzo email valido.", subjectError: "Inserisci un oggetto.", phoneError: "Usa un numero internazionale completo con prefisso nazionale, per esempio +250788123456.", messageError: "Scrivi almeno 12 caratteri."
+        communityText: "Unisciti a un gruppo multilingue di organizzatori, ricercatori, tecnologi, costruttori e cittadini.", nameLabel: "Nome", emailLabel: "Email", phoneLabel: "Telefono, preferibilmente WhatsApp", roleLabel: "Come vorresti contribuire?", communitySubmit: "Unisciti",
+        nameError: "Inserisci il tuo nome.", emailError: "Inserisci un indirizzo email valido.", phoneError: "Usa un numero internazionale completo con prefisso nazionale, per esempio +250788123456.", messageError: "Scrivi almeno 12 caratteri."
       },
       ru: {
         name: "Русский", asset: "Russian", dir: "ltr", locale: "ru_RU", motto: "С 9 до 13. Одна работа. Никаких счетов. Вместе.",
         title: "Beyond Bills | Центр идей поствалютной экономики", description: "Beyond Bills продвигает экономику услуг, где подходящая работа с 9 до 13 обеспечивает жизненно необходимые блага.",
-        navHome: "Главная", navManifesto: "Манифест", navCommunity: "Сообщество", navContact: "Контакты", kicker: "Формирующаяся НПО и идеологический центр",
+        navHome: "Главная", navManifesto: "Манифест", navCommunity: "Сообщество", kicker: "Формирующаяся НПО и идеологический центр",
         heroMessage: "Beyond Bills представляет поствалютную экономику, где технологии освобождают людей от чрезмерной работы, каждый взрослый вносит вклад через подходящую работу, а глобальная сеть напрямую обеспечивает жизненные необходимости, превращая четыре часа осмысленного труда в больше времени, безопасности, достоинства и человеческих возможностей.",
         readManifesto: "Читать манифест", joinMovement: "Вступить в сообщество", manifestoKicker: "Манифест", manifestoTitle: "Экономика прямого обеспечения человеческой жизни.",
         manifestoSummary: "Манифест Beyond Bills утверждает, что экономика должна строиться вокруг гарантированного доступа к жизненным необходимостям, а не бесконечного оборота денег. Он предлагает одну осмысленную работу для каждого взрослого, день с 9 до 13, ответственную автоматизацию и глобальную сеть услуг.",
         openHtml: "Открыть HTML-манифест", downloadPdf: "Скачать PDF", pillarOneTitle: "Четыре часа вклада", pillarOneText: "Более короткий рабочий день служит производительности, семье, обучению и гражданской жизни.",
         pillarTwoTitle: "Подходящая работа", pillarTwoText: "Каждый взрослый вносит вклад через роль, соответствующую способностям, таланту, обучению и достоинству.", pillarThreeTitle: "Жизненные необходимости", pillarThreeText: "Вознаграждение становится прямым доступом к основным услугам.",
         pillarFourTitle: "Глобальная сеть", pillarFourText: "Люди, компании и институты сотрудничают для обеспечения общих услуг.", communityKicker: "Сообщество", communityTitle: "Помогите сформировать поствалютный разговор.",
-        communityText: "Присоединяйтесь к многоязычному кругу организаторов, исследователей, технологов, создателей и граждан.", nameLabel: "Имя", emailLabel: "Email", roleLabel: "Как вы хотите участвовать?", communitySubmit: "Присоединиться",
-        contactKicker: "Контакты", contactTitle: "Связаться с Beyond Bills.", contactText: "Отправьте вопросы, предложения партнерства, исследовательские идеи или медиа-запросы.", subjectLabel: "Тема", phoneLabel: "Телефон, желательно WhatsApp", messageLabel: "Сообщение", contactSubmit: "Отправить",
-        nameError: "Введите имя.", emailError: "Введите действительный email.", subjectError: "Введите тему.", phoneError: "Используйте полный международный номер с кодом страны, например +250788123456.", messageError: "Напишите не менее 12 символов."
+        communityText: "Присоединяйтесь к многоязычному кругу организаторов, исследователей, технологов, создателей и граждан.", nameLabel: "Имя", emailLabel: "Email", phoneLabel: "Телефон, желательно WhatsApp", roleLabel: "Как вы хотите участвовать?", communitySubmit: "Присоединиться",
+        nameError: "Введите имя.", emailError: "Введите действительный email.", phoneError: "Используйте полный международный номер с кодом страны, например +250788123456.", messageError: "Напишите не менее 12 символов."
       },
       zh: {
         name: "中文", asset: "Chinese", dir: "ltr", locale: "zh_CN", motto: "9 点至 1 点。一份工作。没有账单。共同前行。",
         title: "Beyond Bills | 后货币经济思想机构", description: "Beyond Bills 倡导一种服务型经济，让每位成年人通过一份适合能力的 9 点至 1 点工作获得生活必需保障。",
-        navHome: "首页", navManifesto: "宣言", navCommunity: "加入社区", navContact: "联系", kicker: "新兴 NGO 与理念型智库",
+        navHome: "首页", navManifesto: "宣言", navCommunity: "加入社区", kicker: "新兴 NGO 与理念型智库",
         heroMessage: "Beyond Bills 想象一种后货币经济：技术让人们摆脱过度劳动，每位成年人通过适合能力的一份工作贡献价值，全球网络直接提供生活必需品，把四小时有意义的工作转化为更多时间、安全、尊严与人的可能性。",
         readManifesto: "阅读宣言", joinMovement: "加入社区", manifestoKicker: "宣言", manifestoTitle: "为人的生活直接供给的经济。",
         manifestoSummary: "Beyond Bills 宣言主张，经济应围绕保障生活必需品的获得来组织，而不是围绕货币的无尽流通。它提出每位成年人一份有意义且适合能力的工作、9 点至 1 点工作日、负责任的自动化以及全球服务网络。",
         openHtml: "打开 HTML 宣言", downloadPdf: "下载 PDF", pillarOneTitle: "四小时贡献", pillarOneText: "更短的工作日服务于生产力、家庭、学习与公共生活。",
         pillarTwoTitle: "适配能力的工作", pillarTwoText: "每位成年人通过尊重能力、天赋、训练与尊严的角色贡献。", pillarThreeTitle: "生活必需", pillarThreeText: "报酬成为对基本服务的直接获取。",
         pillarFourTitle: "全球网络", pillarFourText: "个人、公司与机构合作供给共享服务。", communityKicker: "加入社区", communityTitle: "共同塑造后货币讨论。",
-        communityText: "加入由组织者、研究者、技术人员、建设者和公民组成的多语言社群。", nameLabel: "姓名", emailLabel: "邮箱", roleLabel: "你希望如何贡献？", communitySubmit: "加入社区",
-        contactKicker: "联系", contactTitle: "联系 Beyond Bills。", contactText: "发送问题、合作说明、研究想法或媒体请求。", subjectLabel: "主题", phoneLabel: "电话，最好是 WhatsApp", messageLabel: "留言", contactSubmit: "发送",
-        nameError: "请输入姓名。", emailError: "请输入有效邮箱。", subjectError: "请输入主题。", phoneError: "请使用带国家代码的完整国际号码，例如 +250788123456。", messageError: "请至少输入 12 个字符。"
+        communityText: "加入由组织者、研究者、技术人员、建设者和公民组成的多语言社群。", nameLabel: "姓名", emailLabel: "邮箱", phoneLabel: "电话，最好是 WhatsApp", roleLabel: "你希望如何贡献？", communitySubmit: "加入社区",
+        nameError: "请输入姓名。", emailError: "请输入有效邮箱。", phoneError: "请使用带国家代码的完整国际号码，例如 +250788123456。", messageError: "请至少输入 12 个字符。"
       },
       ar: {
         name: "العربية", asset: "Arabic", dir: "rtl", locale: "ar_AR", motto: "من 9 إلى 1. وظيفة واحدة. بلا فواتير. معًا.",
         title: "Beyond Bills | مركز فكر لاقتصاد ما بعد العملة", description: "تدعو Beyond Bills إلى اقتصاد قائم على الخدمات، حيث توفر وظيفة مناسبة من التاسعة إلى الواحدة أساسيات الحياة.",
-        navHome: "الرئيسية", navManifesto: "البيان", navCommunity: "المجتمع", navContact: "التواصل", kicker: "منظمة غير حكومية ناشئة ومركز فكر أيديولوجي",
+        navHome: "الرئيسية", navManifesto: "البيان", navCommunity: "المجتمع", kicker: "منظمة غير حكومية ناشئة ومركز فكر أيديولوجي",
         heroMessage: "تتخيل Beyond Bills اقتصادًا ما بعد العملة، حيث تحرر التكنولوجيا الناس من العمل المفرط، ويساهم كل بالغ عبر وظيفة مناسبة لقدراته، وتوفر شبكة عالمية أساسيات الحياة مباشرة، فتحول أربع ساعات من العمل الهادف إلى مزيد من الوقت والأمان والكرامة والإمكان الإنساني.",
         readManifesto: "اقرأ البيان", joinMovement: "انضم إلى المجتمع", manifestoKicker: "البيان", manifestoTitle: "اقتصاد توفير مباشر للحياة الإنسانية.",
         manifestoSummary: "يجادل بيان Beyond Bills بأن الاقتصاد ينبغي أن ينظم حول ضمان الوصول إلى أساسيات الحياة، لا حول تعظيم دوران العملة. ويقترح وظيفة واحدة هادفة لكل بالغ، ويوم عمل من التاسعة إلى الواحدة، واستخدامًا مسؤولًا للأتمتة، وشبكة خدمات عالمية.",
         openHtml: "افتح بيان HTML", downloadPdf: "تنزيل PDF", pillarOneTitle: "مساهمة من أربع ساعات", pillarOneText: "يصبح يوم العمل الأقصر هدفًا للإنتاجية والأسرة والتعلم والحياة المدنية.",
         pillarTwoTitle: "عمل مناسب للقدرات", pillarTwoText: "يساهم كل بالغ بدور يراعي القدرة والموهبة والتدريب والكرامة.", pillarThreeTitle: "أساسيات الحياة", pillarThreeText: "تصبح المكافأة وصولًا مباشرًا إلى الخدمات الأساسية.",
         pillarFourTitle: "شبكة عالمية", pillarFourText: "يتعاون الأفراد والشركات والمؤسسات لتوفير خدمات مشتركة.", communityKicker: "المجتمع", communityTitle: "ساعد في تشكيل حوار ما بعد العملة.",
-        communityText: "انضم إلى دائرة متعددة اللغات من المنظمين والباحثين والتقنيين والبناة والمواطنين.", nameLabel: "الاسم", emailLabel: "البريد الإلكتروني", roleLabel: "كيف تود أن تساهم؟", communitySubmit: "انضم",
-        contactKicker: "التواصل", contactTitle: "تحدث إلى Beyond Bills.", contactText: "أرسل الأسئلة أو مقترحات الشراكة أو أفكار البحث أو طلبات الإعلام.", subjectLabel: "الموضوع", phoneLabel: "الهاتف، ويفضل واتساب", messageLabel: "الرسالة", contactSubmit: "إرسال",
-        nameError: "يرجى إدخال الاسم.", emailError: "يرجى إدخال بريد إلكتروني صالح.", subjectError: "يرجى إدخال الموضوع.", phoneError: "استخدم رقمًا دوليًا كاملًا مع رمز البلد، مثل +250788123456.", messageError: "اكتب 12 حرفًا على الأقل."
+        communityText: "انضم إلى دائرة متعددة اللغات من المنظمين والباحثين والتقنيين والبناة والمواطنين.", nameLabel: "الاسم", emailLabel: "البريد الإلكتروني", phoneLabel: "الهاتف، ويفضل واتساب", roleLabel: "كيف تود أن تساهم؟", communitySubmit: "انضم",
+        nameError: "يرجى إدخال الاسم.", emailError: "يرجى إدخال بريد إلكتروني صالح.", phoneError: "استخدم رقمًا دوليًا كاملًا مع رمز البلد، مثل +250788123456.", messageError: "اكتب 12 حرفًا على الأقل."
       }
     };
 

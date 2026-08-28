@@ -60,6 +60,6 @@ N.B: All the behavior should be consistent in all the supported languages.
 # More behavior 1
 
 1. Remove the 'Contact' section, the 'Join Community' form section is enough. Edit the 'Join Community' section form to add
-'Phone, preferably WhatsApp' input field as mandatory as well as inline validations accordingly.
+'Phone, preferably WhatsApp' input field as mandatory below email as well as inline validations accordingly.
 2. Make the menu bar of the manifesto html version more slick, smooth, and engaging.
 NB: Make sure the new behavior is consistent in all languages.

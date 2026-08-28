@@ -7,6 +7,11 @@
   const copyButton = document.querySelector("[data-copy-link]");
   const toast = document.querySelector("[data-toast]");
   const titleTarget = document.querySelector("[data-reader-title]");
+  const readerBar = document.querySelector(".reader-bar");
+  const progress = document.createElement("span");
+  progress.className = "reader-progress";
+  progress.setAttribute("aria-hidden", "true");
+  if (readerBar) readerBar.appendChild(progress);
 
   function slugify(value, index) {
     const clean = value
@@ -20,6 +25,7 @@
   function setSidebar(open) {
     body.classList.toggle("sidebar-open", open);
     if (menuButton) menuButton.setAttribute("aria-expanded", String(open));
+    if (menuButton) menuButton.classList.toggle("menu-active", open);
   }
 
   function showToast(message) {
@@ -33,6 +39,7 @@
   if (article && toc) {
     const headings = Array.from(article.querySelectorAll("h1, h2, h3"));
     const used = new Set();
+    const links = [];
 
     headings.forEach((heading, index) => {
       const text = heading.textContent.replace(/\s+/g, " ").trim();
@@ -51,8 +58,30 @@
       link.addEventListener("click", () => setSidebar(false));
       item.appendChild(link);
       toc.appendChild(item);
+      links.push({ heading, link });
     });
+
+    function updateActiveSection() {
+      const offset = 110;
+      let active = links[0];
+      links.forEach((entry) => {
+        if (entry.heading.getBoundingClientRect().top <= offset) active = entry;
+      });
+      links.forEach((entry) => entry.link.classList.toggle("is-active", entry === active));
+    }
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
   }
+
+  function updateProgress() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const amount = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+    progress.style.transform = `scaleX(${amount})`;
+  }
+
+  updateProgress();
+  window.addEventListener("scroll", updateProgress, { passive: true });
 
   if (menuButton) {
     menuButton.addEventListener("click", () => setSidebar(!body.classList.contains("sidebar-open")));
