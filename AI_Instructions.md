@@ -22,36 +22,36 @@ In the following sample we seek to detect whether a user is in a French speaking
 ```
 function preciseDefaultLanguage()
 {
-    let isFr = "en";
+        let isFr = "en";
 
-    // Set containing official/co-official French speaking country ISO 2-letter codes 
-    const frenchSpeakingCountries = new Set([
-        'FR', 'CA', 'CD', 'MG', 'CM', 'CI', 'NE', 'BF', 'ML', 'SN', 'TD', 'GN', 'RW', 'BI', 
-        'BJ', 'HT', 'CH', 'TG', 'CF', 'CG', 'GA', 'DJ', 'GQ', 'KM', 'LU', 'VU', 'SC', 'MC', 'BE'
-    ]);
+        // Set containing official/co-official French speaking country ISO 2-letter codes 
+        const frenchSpeakingCountries = new Set([
+                'FR', 'CA', 'CD', 'MG', 'CM', 'CI', 'NE', 'BF', 'ML', 'SN', 'TD', 'GN', 'RW', 'BI', 
+                'BJ', 'HT', 'CH', 'TG', 'CF', 'CG', 'GA', 'DJ', 'GQ', 'KM', 'LU', 'VU', 'SC', 'MC', 'BE'
+        ]);
 
-    try {
-                    
-        // Call the geojs.io combined data endpoint asynchronously
-        const response = await fetch('https://get.geojs.io/v1/ip/geo.json');
-        if (!response.ok) throw new Error('API server unreachable');
-                    
-        const data = await response.json();
+        try {
+                                        
+                // Call the geojs.io combined data endpoint asynchronously
+                const response = await fetch('https://get.geojs.io/v1/ip/geo.json');
+                if (!response.ok) throw new Error('API server unreachable');
+                                        
+                const data = await response.json();
 
-        // Extract variables out of the geojs payload
-        const countryCode = data.country_code ? data.country_code.toUpperCase() : null;
+                // Extract variables out of the geojs payload
+                const countryCode = data.country_code ? data.country_code.toUpperCase() : null;
 
-        // Evaluate whether the extracted country is French-speaking
-        if (countryCode && frenchSpeakingCountries.has(countryCode)) {
-            isFr = "fr";
-        } 
+                // Evaluate whether the extracted country is French-speaking
+                if (countryCode && frenchSpeakingCountries.has(countryCode)) {
+                        isFr = "fr";
+                } 
 
-    } catch (error) {
-        console.error("GeoJS Error: ", error);
-        isFr = null;
-    }
+        } catch (error) {
+                console.error("GeoJS Error: ", error);
+                isFr = null;
+        }
 
-    return isFr;
+        return isFr;
 }
 ```
 
