@@ -1,6 +1,6 @@
-# Beyond Bills Static Website
+# Beyond Bills Global Static Website
 
-Beyond Bills is a static multilingual website for an emerging NGO and ideological think tank advocating a post-currency, service-based economy.
+Beyond Bills Global is a static multilingual website for an emerging NGO and ideological think tank advocating a post-currency, service-based economy.
 
 ## Files
 
