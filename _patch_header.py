@@ -15,7 +15,7 @@ new = (
     '        <nav class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">\n'
     '            <a href="#hero" class="flex min-w-0 items-center gap-3" aria-label="Beyond Bills Global home">\n'
     '                <img src="assets/Beyond_Bills_Logo.png" alt="Beyond Bills Global logo" class="h-11 w-11 shrink-0 object-contain">\n'
-    '                <span class="truncate text-base font-black tracking-tight sm:text-lg lg:text-xl">Beyond Bills Global</span>\n'
+    '                <span class="break-words text-base font-black tracking-tight sm:text-lg lg:text-xl">Beyond Bills Global</span>\n'
     "            </a>"
 )
 if old not in text:
