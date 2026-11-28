@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { margin: 0; padding-top: 4.25rem; background: #f4f6f8; color: #172033; font-family: "Nunito", system-ui, sans-serif; font-size: clamp(1rem, .45vw + .94rem, 1.15rem); line-height: 1.8; }
+.reader-bar { position: fixed; inset: 0 0 auto; z-index: 20; display: flex; align-items: center; gap: .5rem; min-height: 4.25rem; padding: .55rem clamp(.8rem, 3vw, 2rem); background: #080a0d; color: white; box-shadow: 0 8px 28px #0003; }
+.reader-bar button, .reader-bar a { display: inline-flex; align-items: center; justify-content: center; min-width: 2.8rem; min-height: 2.8rem; padding: .45rem; border: 1px solid #ffffff35; background: #ffffff10; color: white; text-decoration: none; cursor: pointer; transition: background .2s, transform .2s; }
+.reader-bar button:hover, .reader-bar a:hover { background: #ffffff25; transform: translateY(-1px); }
+.reader-bar .reader-title { margin-left: .5rem; font-size: .95rem; font-weight: 800; letter-spacing: .02em; }
+.reader-icon { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.reader-sidebar { position: fixed; z-index: 30; inset: 0 auto 0 0; width: min(22rem, 86vw); padding: 5.4rem 1.1rem 1.5rem; overflow-y: auto; background: #101318; color: white; box-shadow: 12px 0 32px #0003; transform: translateX(-105%); transition: transform .25s ease; }
+.reader-sidebar.is-open { transform: translateX(0); }
+.reader-sidebar h2 { margin: 0 0 1rem; color: #cbd5e1; font-size: .8rem; letter-spacing: .13em; text-transform: uppercase; }
+.reader-sidebar ol { margin: 0; padding-left: 1.2rem; }
+.reader-sidebar li { margin: .25rem 0; }
+.reader-sidebar a { display: block; padding: .45rem .55rem; color: #e5e7eb; font-size: .93rem; line-height: 1.45; text-decoration: none; }
+.reader-sidebar a:hover, .reader-sidebar a:focus { background: #ffffff14; color: white; }
+.reader-scrim { position: fixed; z-index: 25; inset: 0; display: none; background: #05070ab0; }
+.reader-scrim.is-open { display: block; }
+.reader-main { width: min(54rem, calc(100% - 2rem)); margin: clamp(1.5rem, 5vw, 4rem) auto; padding: clamp(1.25rem, 5vw, 4rem); background: white; box-shadow: 0 12px 50px #14203312; }
+.reader-main h1, .reader-main h2, .reader-main h3 { color: #122033; line-height: 1.25; scroll-margin-top: 5.3rem; }
+.reader-main h1 { margin: 2.5rem 0 1rem; font-size: clamp(1.65rem, 4.3vw, 2.45rem); }
+.reader-main h2 { margin: 2rem 0 .7rem; font-size: clamp(1.3rem, 3.2vw, 1.8rem); }
+.reader-main h3 { margin: 1.5rem 0 .6rem; font-size: 1.15rem; }
+.reader-main p { margin: 0 0 1rem; }
+.reader-main ul, .reader-main ol { padding-left: 1.5rem; }
+.reader-main li { margin: .35rem 0; }
+.reader-main .objection { margin: 1.1rem 0; padding: .8rem 1rem; border-left: 4px solid #dc3545; background: #fff4f4; }
+.reader-main .core-response { margin: 1.1rem 0 1.5rem; padding: .9rem 1rem; border-left: 4px solid #188457; background: #effaf4; }
+[dir="rtl"] .reader-sidebar { inset-inline: auto 0; transform: translateX(105%); }
+[dir="rtl"] .reader-sidebar.is-open { transform: translateX(0); }
+[dir="rtl"] .reader-main .objection, [dir="rtl"] .reader-main .core-response { border-left: 0; border-right: 4px solid; }
+[dir="rtl"] .reader-main .objection { border-right-color: #dc3545; }
+[dir="rtl"] .reader-main .core-response { border-right-color: #188457; }
+@media (max-width: 600px) { .reader-bar .reader-title { font-size: .82rem; } .reader-main { width: 100%; margin: 1rem auto; } }

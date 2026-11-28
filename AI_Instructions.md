@@ -63,3 +63,15 @@ N.B: All the behavior should be consistent in all the supported languages.
 'Phone, preferably WhatsApp' input field as mandatory below email as well as inline validations accordingly.
 2. Make the menu bar of the manifesto html version more slick, smooth, and engaging.
 NB: Make sure the new behavior is consistent in all languages.
+
+# More behavior 2 
+
+Add a 'Critiques & Answers' section after the manifesto section. Like the manifesto, the 'Critiques & Answers' section leads with a message indicating that the critiques come from a discussion we have had with individuals as we advocated for Beyond Bills Global and it allows the user to navigate to the html version. For each HTML version of the Critiques, found in 'assets' root folder with file names starting with 'Critiques_and_Answers' and ending in any the 8 supported language, improve the HTML code to extract headings and subheadings to be accessible from a menu that shrinks in a standard hamburger icon at the top of the file in the navigation bar. The hamburger menu should be implemented as a left sidebar on all devices. Along with the hamburger icon should be two icons, that is, 'back to site', and 'copy link' icons, allowing the user to go back to main site, to copy the link to the HTML version of the manifesto, respectfully. Improve the font family and the font size to make the HTML readable, slick, and smooth on all types of devices. Prioritize the 'Nunito' font-family, available using this html line of code: `<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">`. Remove all the per-html CSS and Javascript code to centralize them, leaving only the text content which you will properly display as a well-organized html reading material with generally same central design. Headings and subheadings should be well placed so that a reader reads through conveniently. The objection paragraph should have a slick red left side bar on it while the core response paragraph should have a slick green left sidebar on it for visibility and focus. The navigation bar should be slick black and smooth. Include appropriate open graph code in the head of all the Critiques html files, including the open graph image found in the head of the root index file. Clear all the html-converter-related code found in the header.
+N.B.: The above behavior should be consistent in all the supported 8 languages and you will leave the rest of the code in the codebase as it is.
+
+# More behavior 3
+
+1. Edit the Critiques html files to condense each objection text into one paragraph instead of many so that one slick red side bar will be enough. 
+2. Also edit the 'Contents' left menu of the Critiques that displays when the hamburger is clicked to remove the ordinal numbering, leaving only the headings and subheadings text. 
+3. The 'back to site' and 'copy link' buttons in the Critiques should be placed in the rightmost part of the navigation menu.
+N.B.: The above behaviors should be consistent in all 8 supported languages.

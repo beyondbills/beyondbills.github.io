@@ -84,6 +84,7 @@
             <div class="hidden items-center gap-1 lg:flex">
                 <a href="#hero" class="nav-link px-4 py-3 text-sm font-bold hover:bg-white/10" data-i18n="navHome">Home</a>
                 <a href="#manifesto" class="nav-link px-4 py-3 text-sm font-bold hover:bg-white/10" data-i18n="navManifesto">Manifesto</a>
+                <a href="#critiques" class="nav-link px-4 py-3 text-sm font-bold hover:bg-white/10" data-i18n="navCritiques">Critiques &amp; Answers</a>
                 <a href="#community" class="nav-link px-4 py-3 text-sm font-bold hover:bg-white/10" data-i18n="navCommunity">Join Community</a>
             </div>
             <div class="flex items-center gap-2">
@@ -102,6 +103,7 @@
         <div id="mobileMenu" class="hidden border-t border-white/10 bg-black px-4 pb-4 lg:hidden">
             <a href="#hero" class="block px-3 py-3 font-bold" data-i18n="navHome">Home</a>
             <a href="#manifesto" class="block px-3 py-3 font-bold" data-i18n="navManifesto">Manifesto</a>
+            <a href="#critiques" class="block px-3 py-3 font-bold" data-i18n="navCritiques">Critiques &amp; Answers</a>
             <a href="#community" class="block px-3 py-3 font-bold" data-i18n="navCommunity">Join Community</a>
         </div>
     </header>
@@ -177,6 +179,20 @@
             </div>
         </section>
 
+        <section id="critiques" class="bg-slate-100 py-20 sm:py-28">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl" data-aos="fade-up">
+                    <p class="mb-4 inline-flex bg-rose px-4 py-2 text-sm font-extrabold text-white" data-i18n="critiquesKicker">Critiques &amp; Answers</p>
+                    <h2 class="text-4xl font-black leading-tight text-ink sm:text-5xl" data-i18n="critiquesTitle">Questions raised in conversation.</h2>
+                    <p class="mt-5 text-lg leading-8 text-slate-700" data-i18n="critiquesSummary">These critiques come from discussions we have had with individuals while advocating for Beyond Bills Global. We have gathered the questions and our answers so readers can consider the proposals and the concerns together.</p>
+                    <a id="critiquesHtmlLink" href="assets/Critiques_and_Answers_English.html?lang=en" class="mt-8 inline-flex items-center justify-center gap-2 bg-ink px-6 py-4 font-black text-white transition hover:bg-slate-700">
+                        <span class="material-symbols-outlined" aria-hidden="true">forum</span>
+                        <span data-i18n="openCritiques">Read Critiques &amp; Answers</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <section id="community" class="bg-ink py-20 text-white sm:py-28">
             <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
                 <div data-aos="fade-right">
@@ -229,6 +245,7 @@
                 title: "Beyond Bills Global | Post-Currency Economy Think Tank",
                 description: "Beyond Bills Global is an emerging NGO and ideological think tank advocating a post-currency, service-based economy where one ability-suited 9-to-1 job provisions life's essentials.",
                 navHome: "Home", navManifesto: "Manifesto", navCommunity: "Join Community",
+                navCritiques: "Critiques & Answers", critiquesKicker: "Critiques & Answers", critiquesTitle: "Questions raised in conversation.", critiquesSummary: "These critiques come from discussions we have had with individuals while advocating for Beyond Bills Global. We have gathered the questions and our answers so readers can consider the proposals and the concerns together.", openCritiques: "Read Critiques & Answers",
                 kicker: "Emerging NGO and ideological think tank",
                 heroMessage: "Beyond Bills Global imagines a post-currency economy where technology frees people from excessive work, every adult contributes through one ability-suited job, and a global network directly provisions life's essentials—turning four hours of meaningful work into more time, security, dignity, and human possibility.",
                 readManifesto: "Read the manifesto", joinMovement: "Join the community", manifestoKicker: "The manifesto", manifestoTitle: "A direct-provision economy for human life.",
@@ -244,6 +261,7 @@
                 name: "Français", asset: "French", dir: "ltr", locale: "fr_FR", motto: "De 9h à 13h. Un métier. Zéro facture. Ensemble.",
                 title: "Beyond Bills Global | Think tank pour une économie post-monétaire", description: "Beyond Bills Global défend une économie de services où un emploi adapté de 9h à 13h ouvre l'accès aux essentiels de la vie.",
                 navHome: "Accueil", navManifesto: "Manifeste", navCommunity: "Communauté", kicker: "ONG émergente et think tank idéologique",
+                navCritiques: "Critiques et réponses", critiquesKicker: "Critiques et réponses", critiquesTitle: "Des questions soulevées au fil des échanges.", critiquesSummary: "Ces critiques proviennent de discussions avec des personnes rencontrées lors de la promotion de Beyond Bills Global. Nous avons rassemblé les questions et nos réponses afin que chacun puisse examiner ensemble les propositions et les préoccupations.", openCritiques: "Lire les critiques et réponses",
                 heroMessage: "Beyond Bills Global imagine une économie post-monétaire où la technologie libère les personnes du travail excessif, où chaque adulte contribue par un emploi adapté à ses capacités, et où un réseau mondial fournit directement les essentiels de la vie, transformant quatre heures de travail utile en plus de temps, de sécurité, de dignité et de possibilités humaines.",
                 readManifesto: "Lire le manifeste", joinMovement: "Rejoindre la communauté", manifestoKicker: "Le manifeste", manifestoTitle: "Une économie de provision directe pour la vie humaine.",
                 manifestoSummary: "Le manifeste Beyond Bills Global affirme que l'économie devrait garantir l'accès aux essentiels de la vie plutôt que maximiser la circulation monétaire. Il propose un emploi utile et adapté pour chaque adulte, une journée de 9h à 13h, l'automatisation responsable et un réseau mondial de services.",
@@ -257,6 +275,7 @@
                 name: "Español", asset: "Spanish", dir: "ltr", locale: "es_ES", motto: "De 9 a 1. Un empleo. Sin facturas. Juntos.",
                 title: "Beyond Bills Global | Laboratorio de ideas postmonetario", description: "Beyond Bills Global promueve una economía basada en servicios donde un empleo de 9 a 1 adaptado a cada persona provee los esenciales de la vida.",
                 navHome: "Inicio", navManifesto: "Manifiesto", navCommunity: "Comunidad", kicker: "ONG emergente y laboratorio ideológico",
+                navCritiques: "Críticas y respuestas", critiquesKicker: "Críticas y respuestas", critiquesTitle: "Preguntas surgidas en nuestras conversaciones.", critiquesSummary: "Estas críticas provienen de conversaciones con personas durante nuestra defensa de Beyond Bills Global. Hemos reunido las preguntas y respuestas para que los lectores puedan considerar conjuntamente las propuestas y sus inquietudes.", openCritiques: "Leer críticas y respuestas",
                 heroMessage: "Beyond Bills Global imagina una economía postmonetaria donde la tecnología libera a las personas del trabajo excesivo, cada adulto contribuye mediante un empleo adaptado a sus capacidades y una red global provee directamente los esenciales de la vida, convirtiendo cuatro horas de trabajo significativo en más tiempo, seguridad, dignidad y posibilidad humana.",
                 readManifesto: "Leer el manifiesto", joinMovement: "Unirse a la comunidad", manifestoKicker: "El manifiesto", manifestoTitle: "Una economía de provisión directa para la vida humana.",
                 manifestoSummary: "El manifiesto sostiene que la economía debe organizarse alrededor del acceso garantizado a los esenciales de la vida, no alrededor de la circulación infinita de dinero. Propone un empleo útil para cada adulto, jornada de 9 a 1, automatización responsable y una red global de servicios.",
@@ -270,6 +289,7 @@
                 name: "Deutsch", asset: "German", dir: "ltr", locale: "de_DE", motto: "9 bis 1. Ein Job. Keine Rechnungen. Gemeinsam.",
                 title: "Beyond Bills Global | Denkfabrik für eine postmonetäre Wirtschaft", description: "Beyond Bills Global setzt sich für eine servicebasierte Wirtschaft ein, in der ein geeigneter 9-bis-1-Job die Lebensgrundlagen sichert.",
                 navHome: "Start", navManifesto: "Manifest", navCommunity: "Gemeinschaft", kicker: "Entstehende NGO und ideologische Denkfabrik",
+                navCritiques: "Kritik und Antworten", critiquesKicker: "Kritik und Antworten", critiquesTitle: "Fragen aus gemeinsamen Gesprächen.", critiquesSummary: "Diese Kritikpunkte stammen aus Gesprächen mit Menschen, während wir uns für Beyond Bills Global eingesetzt haben. Wir haben Fragen und Antworten zusammengestellt, damit Leser Vorschläge und Bedenken gemeinsam betrachten können.", openCritiques: "Kritik und Antworten lesen",
                 heroMessage: "Beyond Bills Global entwirft eine postmonetäre Wirtschaft, in der Technologie Menschen von übermäßiger Arbeit befreit, jeder Erwachsene durch eine fähigkeitsgerechte Aufgabe beiträgt und ein globales Netzwerk die Lebensgrundlagen direkt bereitstellt, sodass vier Stunden sinnvolle Arbeit mehr Zeit, Sicherheit, Würde und menschliche Möglichkeiten schaffen.",
                 readManifesto: "Manifest lesen", joinMovement: "Gemeinschaft beitreten", manifestoKicker: "Das Manifest", manifestoTitle: "Eine Wirtschaft direkter Versorgung für das menschliche Leben.",
                 manifestoSummary: "Das Beyond Bills Global Manifest argumentiert, dass Wirtschaft den garantierten Zugang zu Lebensgrundlagen sichern sollte, statt endlosen Geldumlauf zu maximieren. Es schlägt eine sinnvolle Aufgabe für jeden Erwachsenen, einen 9-bis-1-Arbeitstag, verantwortliche Automatisierung und ein globales Servicenetzwerk vor.",
@@ -283,6 +303,7 @@
                 name: "Italiano", asset: "Italian", dir: "ltr", locale: "it_IT", motto: "9 alle 13. Un lavoro. Niente bollette. Insieme.",
                 title: "Beyond Bills Global | Centro di pensiero per un'economia post-monetaria", description: "Beyond Bills Global promuove un'economia di servizi in cui un lavoro adatto dalle 9 alle 13 provvede agli essenziali della vita.",
                 navHome: "Home", navManifesto: "Manifesto", navCommunity: "Comunità", kicker: "ONG emergente e think tank ideologico",
+                navCritiques: "Critiche e risposte", critiquesKicker: "Critiche e risposte", critiquesTitle: "Domande emerse dal dialogo.", critiquesSummary: "Queste critiche provengono dalle conversazioni avute con le persone mentre promuovevamo Beyond Bills Global. Abbiamo raccolto domande e risposte affinché i lettori possano considerare insieme proposte e preoccupazioni.", openCritiques: "Leggi critiche e risposte",
                 heroMessage: "Beyond Bills Global immagina un'economia post-monetaria in cui la tecnologia libera le persone dal lavoro eccessivo, ogni adulto contribuisce con un lavoro adatto alle proprie capacità e una rete globale fornisce direttamente gli essenziali della vita, trasformando quattro ore di lavoro significativo in più tempo, sicurezza, dignità e possibilità umane.",
                 readManifesto: "Leggi il manifesto", joinMovement: "Unisciti alla comunità", manifestoKicker: "Il manifesto", manifestoTitle: "Un'economia di fornitura diretta per la vita umana.",
                 manifestoSummary: "Il manifesto Beyond Bills Global sostiene che l'economia dovrebbe garantire l'accesso agli essenziali della vita invece di massimizzare la circolazione del denaro. Propone un lavoro significativo per ogni adulto, una giornata dalle 9 alle 13, automazione responsabile e una rete globale di servizi.",
@@ -296,6 +317,7 @@
                 name: "Русский", asset: "Russian", dir: "ltr", locale: "ru_RU", motto: "С 9 до 13. Одна работа. Никаких счетов. Вместе.",
                 title: "Beyond Bills Global | Центр идей поствалютной экономики", description: "Beyond Bills Global продвигает экономику услуг, где подходящая работа с 9 до 13 обеспечивает жизненно необходимые блага.",
                 navHome: "Главная", navManifesto: "Манифест", navCommunity: "Сообщество", kicker: "Формирующаяся НПО и идеологический центр",
+                navCritiques: "Критика и ответы", critiquesKicker: "Критика и ответы", critiquesTitle: "Вопросы, возникшие в обсуждениях.", critiquesSummary: "Эти критические замечания возникли в беседах с людьми во время нашей кампании в поддержку Beyond Bills Global. Мы собрали вопросы и ответы, чтобы читатели могли вместе рассмотреть предложения и опасения.", openCritiques: "Читать критику и ответы",
                 heroMessage: "Beyond Bills Global представляет поствалютную экономику, где технологии освобождают людей от чрезмерной работы, каждый взрослый вносит вклад через подходящую работу, а глобальная сеть напрямую обеспечивает жизненные необходимости, превращая четыре часа осмысленного труда в больше времени, безопасности, достоинства и человеческих возможностей.",
                 readManifesto: "Читать манифест", joinMovement: "Вступить в сообщество", manifestoKicker: "Манифест", manifestoTitle: "Экономика прямого обеспечения человеческой жизни.",
                 manifestoSummary: "Манифест Beyond Bills Global утверждает, что экономика должна строиться вокруг гарантированного доступа к жизненным необходимостям, а не бесконечного оборота денег. Он предлагает одну осмысленную работу для каждого взрослого, день с 9 до 13, ответственную автоматизацию и глобальную сеть услуг.",
@@ -309,6 +331,7 @@
                 name: "中文", asset: "Chinese", dir: "ltr", locale: "zh_CN", motto: "9 点至 1 点。一份工作。没有账单。共同前行。",
                 title: "Beyond Bills Global | 后货币经济思想机构", description: "Beyond Bills Global 倡导一种服务型经济，让每位成年人通过一份适合能力的 9 点至 1 点工作获得生活必需保障。",
                 navHome: "首页", navManifesto: "宣言", navCommunity: "加入社区", kicker: "新兴 NGO 与理念型智库",
+                navCritiques: "质疑与回应", critiquesKicker: "质疑与回应", critiquesTitle: "讨论中提出的问题。", critiquesSummary: "这些质疑来自我们倡导 Beyond Bills Global 期间与不同人士的讨论。我们整理了问题与回答，便于读者一并思考相关提议与疑虑。", openCritiques: "阅读质疑与回应",
                 heroMessage: "Beyond Bills Global 想象一种后货币经济：技术让人们摆脱过度劳动，每位成年人通过适合能力的一份工作贡献价值，全球网络直接提供生活必需品，把四小时有意义的工作转化为更多时间、安全、尊严与人的可能性。",
                 readManifesto: "阅读宣言", joinMovement: "加入社区", manifestoKicker: "宣言", manifestoTitle: "为人的生活直接供给的经济。",
                 manifestoSummary: "Beyond Bills Global 宣言主张，经济应围绕保障生活必需品的获得来组织，而不是围绕货币的无尽流通。它提出每位成年人一份有意义且适合能力的工作、9 点至 1 点工作日、负责任的自动化以及全球服务网络。",
@@ -322,6 +345,7 @@
                 name: "العربية", asset: "Arabic", dir: "rtl", locale: "ar_AR", motto: "من 9 إلى 1. وظيفة واحدة. بلا فواتير. معًا.",
                 title: "Beyond Bills Global | مركز فكر لاقتصاد ما بعد العملة", description: "تدعو Beyond Bills Global إلى اقتصاد قائم على الخدمات، حيث توفر وظيفة مناسبة من التاسعة إلى الواحدة أساسيات الحياة.",
                 navHome: "الرئيسية", navManifesto: "البيان", navCommunity: "المجتمع", kicker: "منظمة غير حكومية ناشئة ومركز فكر أيديولوجي",
+                navCritiques: "الانتقادات والإجابات", critiquesKicker: "الانتقادات والإجابات", critiquesTitle: "أسئلة طُرحت في النقاشات.", critiquesSummary: "تأتي هذه الانتقادات من نقاشات أجريناها مع أفراد أثناء دعوتنا إلى Beyond Bills Global. جمعنا الأسئلة وإجاباتنا ليتمكن القراء من النظر في المقترحات والمخاوف معًا.", openCritiques: "اقرأ الانتقادات والإجابات",
                 heroMessage: "تتخيل Beyond Bills Global اقتصادًا ما بعد العملة، حيث تحرر التكنولوجيا الناس من العمل المفرط، ويساهم كل بالغ عبر وظيفة مناسبة لقدراته، وتوفر شبكة عالمية أساسيات الحياة مباشرة، فتحول أربع ساعات من العمل الهادف إلى مزيد من الوقت والأمان والكرامة والإمكان الإنساني.",
                 readManifesto: "اقرأ البيان", joinMovement: "انضم إلى المجتمع", manifestoKicker: "البيان", manifestoTitle: "اقتصاد توفير مباشر للحياة الإنسانية.",
                 manifestoSummary: "يجادل بيان Beyond Bills Global بأن الاقتصاد ينبغي أن ينظم حول ضمان الوصول إلى أساسيات الحياة، لا حول تعظيم دوران العملة. ويقترح وظيفة واحدة هادفة لكل بالغ، ويوم عمل من التاسعة إلى الواحدة، واستخدامًا مسؤولًا للأتمتة، وشبكة خدمات عالمية.",
@@ -387,6 +411,7 @@
             document.getElementById("heroImage").alt = `Beyond Bills Global hero image in ${config.name}`;
             document.getElementById("manifestoHtmlLink").href = `assets/Beyond_Bills_Manifesto_${config.asset}.html?lang=${code}`;
             document.getElementById("manifestoPdfLink").href = `assets/Beyond_Bills_Manifesto_${config.asset}.pdf`;
+            document.getElementById("critiquesHtmlLink").href = `assets/Critiques_and_Answers_${config.asset}.html?lang=${code}`;
             document.querySelectorAll("[data-i18n]").forEach((node) => {
                 const key = node.getAttribute("data-i18n");
                 if (config[key]) node.textContent = config[key];
