@@ -74,4 +74,5 @@ N.B.: The above behavior should be consistent in all the supported 8 languages a
 1. Edit the Critiques html files to condense each objection text into one paragraph instead of many so that one slick red side bar will be enough. 
 2. Also edit the 'Contents' left menu of the Critiques that displays when the hamburger is clicked to remove the ordinal numbering, leaving only the headings and subheadings text. 
 3. The 'back to site' and 'copy link' buttons in the Critiques should be placed in the rightmost part of the navigation menu.
+4. Mind the 'Arabic' Critique file to format it as an Arabic language html file.
 N.B.: The above behaviors should be consistent in all 8 supported languages.
